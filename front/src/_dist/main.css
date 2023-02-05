@@ -58,3 +58,14 @@
   color: white;
   padding: 15px;
 }
+.image {
+  mask-image: url("https://static.licdn.com/aero-v1/sc/h/dxf91zhqd2z6b0bwg85ktm5s4");
+
+  width: 55%;
+}
+.divider {
+  display: flex;
+}
+.line {
+  width: 30%;
+}

@@ -20,7 +20,11 @@ function Main() {
             </button>
           </form>
         </div>
-        <img className="image" src="" alt="bg" />
+        <img
+          className="image"
+          src="https://static.licdn.com/aero-v1/sc/h/dxf91zhqd2z6b0bwg85ktm5s4"
+          alt="bg"
+        />
       </div>
     </div>
   );
