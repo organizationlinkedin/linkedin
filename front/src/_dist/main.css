@@ -1,29 +1,31 @@
 .main-container {
   width: 100%;
-  padding-top: 4rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding-bottom: 1rem;
+  align-items: flex-start;
 }
 .connection {
-  width: 64%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 .connection-form {
-  width: 36%;
+  width: 60%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4vw;
 }
 .image {
   width: 40%;
 }
 .connection-form h1 {
-  width: 100%;
-  font-size: 56px;
+  width: 56%;
+  margin: 0;
+  font-size: 50px;
   font-weight: 200;
   color: rgb(146, 90, 6);
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -32,40 +34,106 @@
     "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 .connection-form form {
-  width: 100%;
-  gap: 10px;
+  width: 56%;
+  height: 100%;
+  row-gap: 1vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: self-start;
 }
 .connection-form form input {
   color: rgba(0, 0, 0, 0.9);
-  height: 2rem;
-  width: 95%;
+  width: 72%;
   border: 1px solid rgba(0, 0, 0, 0.6);
   border-radius: 2px;
   background-color: transparent;
-  padding: 20px 12px 4px;
+  height: 45px;
   outline: none;
+  padding-left: 2%;
 }
 .btn-login {
-  border-radius: 20px;
+  border-radius: 30px;
   padding: 10px;
-  width: 100%;
-  background: rgb(42, 156, 231);
+  width: 75%;
+  background: #2977c9;
   border: none;
   color: white;
   padding: 15px;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: lighter;
+}
+.btn-login:hover {
+  background: #29619c;
 }
 .image {
-  mask-image: url("https://static.licdn.com/aero-v1/sc/h/dxf91zhqd2z6b0bwg85ktm5s4");
-
-  width: 55%;
+  width: 40%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.image img {
+  width: 100%;
 }
 .divider {
   display: flex;
 }
 .line {
   width: 30%;
+}
+
+.animated-placeholder::placeholder {
+  transform: translateY(0);
+
+  transition: all 0.2s ease-in-out;
+  font-size: 16px;
+}
+
+.animated-placeholder:focus::placeholder {
+  font-size: 12px;
+  transform: translateY(-10px);
+  transition: all 0.2s ease-in-out;
+}
+.password-container {
+  width: 74.5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3vw;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  height: 45px;
+}
+.password {
+  border: none !important;
+  width: 70% !important;
+}
+.toggle-password {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 2%;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.toggle-password:hover {
+  background-color: lightgray;
+}
+.ant-divider-horizontal.ant-divider-with-text::before {
+  background-color: rgba(0, 0, 0, 0.35);
+  content: "";
+  height: 1px;
+  width: 32%;
+}
+
+.ant-divider-horizontal.ant-divider-with-text::after {
+  background-color: rgba(0, 0, 0, 0.35);
+  content: "";
+  height: 1px;
+  width: 32%;
+}
+.or {
+  font-size: 16px;
+  font-weight: 300;
 }

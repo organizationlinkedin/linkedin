@@ -1,16 +1,15 @@
 import React from "react";
 import "../_dist/navbar.css";
 import { Link } from "react-router-dom";
+import { LinkedinFilled } from "@ant-design/icons";
 
 function Navbar() {
   return (
     <div className="navbar">
-      <img
-        src="https://www.logo.wine/a/logo/LinkedIn/LinkedIn-Logo.wine.svg"
-        alt="logo"
-        className="logo"
-      />
-
+      <div className="logo-container">
+        <span>Linked</span>
+        <LinkedinFilled className="logo2" />
+      </div>
       <ul className="nav-items">
         <Link to="/">
           <li className="nav-item">
@@ -18,7 +17,6 @@ function Navbar() {
             <span>Discover</span>
           </li>
         </Link>
-
         <li className="nav-item">
           <i className="fa-solid fa-user-group"></i>
           <span>People</span>
@@ -45,3 +43,4 @@ function Navbar() {
 }
 
 export default Navbar;
+/*    */
