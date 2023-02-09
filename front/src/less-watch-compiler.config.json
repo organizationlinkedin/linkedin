@@ -1,0 +1,7 @@
+{
+  "watchFolder": "assets",
+  "outputFolder": "_dist",
+  "sourceMap": false,
+  "runOnce": false,
+  "enableJs": true
+}
