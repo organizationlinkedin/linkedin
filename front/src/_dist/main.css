@@ -90,6 +90,7 @@
   transition: all 0.2s ease-in-out;
 }
 .password-container {
+  background-color: #e8f0fe;
   width: 74.5%;
   display: flex;
   justify-content: flex-start;
