@@ -27,8 +27,11 @@
   margin: 0;
   font-size: 50px;
   font-weight: 200;
-  color: #925a06;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: rgb(146, 90, 6);
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 .connection-form form {
   width: 56%;
@@ -79,18 +82,21 @@
 .line {
   width: 30%;
 }
+
 .animated-placeholder::placeholder {
   transform: translateY(0);
+
   transition: all 0.2s ease-in-out;
   font-size: 16px;
 }
+
 .animated-placeholder:focus::placeholder {
   font-size: 12px;
   transform: translateY(-10px);
   transition: all 0.2s ease-in-out;
 }
 .password-container {
-  background-color: #e8f0fe;
+  background-color: rgb(232, 240, 254);
   width: 74.5%;
   display: flex;
   justify-content: flex-start;
@@ -121,6 +127,7 @@
   height: 1px;
   width: 32%;
 }
+
 .ant-divider-horizontal.ant-divider-with-text::after {
   background-color: rgba(0, 0, 0, 0.35);
   content: "";
