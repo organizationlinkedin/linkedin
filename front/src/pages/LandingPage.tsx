@@ -7,7 +7,7 @@ function LandingPage() {
     <div className="container">
       <Navbar />
       <Main />
-      <Footer />
+   {/*    <Footer /> */}
     </div>
   );
 }

@@ -3,35 +3,18 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 15vh;
+  font-family: @poppins;
 }
 
-.logo {
-  width: 235px;
-  height: 43.7px;
-}
-.nav-items {
-  .flex-fe-jc;
-  list-style: none;
-  column-gap: 2rem;
-  border-right: 1px gray solid;
-  padding-right: 1rem;
-}
 .nav-items {
   .flex-fs-jc;
   list-style: none;
   column-gap: 2rem;
-  border-right: 1px gray solid;
   padding-right: 1rem;
-  width: 20%;
 }
 li.nav-item {
   .flex-fc-jc;
-  // display: flex;
-  // justify-content: center;
   flex-direction: column;
-  // align-items: center;
-  // color: gray;
   color: @color-navbar;
   cursor: pointer;
   row-gap: 1.5vh;
@@ -39,16 +22,14 @@ li.nav-item {
 }
 .nav-item:hover {
   color: @color-navbar-hover;
-
-  // color: black;
 }
 .nav-actions {
-  // display: flex;
-  // justify-content: flex-end;
-  // align-items: center;
   .flex-fc-jc;
   gap: 1rem;
   margin-left: 1%;
+}
+.vertical-divider[role="separator"] {
+  height: 2.7em;
 }
 .sign-in-btn {
   padding: 7px;
@@ -58,7 +39,7 @@ li.nav-item {
   width: max-content;
 }
 .sign-in-btn:hover {
-  background-color: rgb(230, 226, 226);
+  background-color: @color-bg-hover-buttom;
 }
 .sign-up-btn {
   border-radius: 24px;
@@ -68,29 +49,40 @@ li.nav-item {
   padding-right: 24px;
   font-size: 16px;
   background: none;
-  border: 1px #116ac3 solid;
+  border: 1px @color-button-sign solid;
   text-align: center;
   width: max-content;
-  color: #116ac3;
+  color: @color-button-sign;
   font-weight: 700;
 }
 .sign-up-btn:hover {
-  background-color: rgb(235, 227, 227);
+  background-color: @color-bg-hover-buttom;
 }
 .logo-container {
-  display: flex;
-  justify-content: flex-start;
+  .flex-ai-center-fs;
   width: 33%;
-  align-items: center;
 }
-// .logo-container {
-//   display: flex;
-//   justify-content: flex-start;
-//   width: 35%;
-//   align-items: center;
-// }
+
 .logo-container span {
-  color: #0a66c2;
-  font-size: 1.9vw;
+  color: @color-button-sign;
+  font-size: 28px;
   font-weight: 700;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .nav-items {
+    .hide;
+  }
+  .vertical-divider[role="separator"] {
+    .hide;
+  }
+  .nav-actions {
+    margin-left: 10%;
+  }
+  .navbar {
+    width: 98%;
+    justify-content: space-between;
+    margin: 0 1%;
+  }
 }

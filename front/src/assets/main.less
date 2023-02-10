@@ -42,7 +42,7 @@
   justify-content: flex-start;
   align-items: self-start;
 }
-.connection-form form input {
+.connection-form form .email {
   color: rgba(0, 0, 0, 0.9);
   width: 72%;
   border: 1px solid rgba(0, 0, 0, 0.6);
@@ -137,4 +137,65 @@
 .or {
   font-size: 16px;
   font-weight: 300;
+}
+@media screen and (max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+    row-gap: 4vh;
+  }
+  .password-container {
+    width: 100%;
+    background-color: transparent;
+  }
+  .password {
+    width: 100%;
+    outline: none;
+    height: 40px;
+  }
+  .password::placeholder {
+    background-color: transparent;
+  }
+  .connection-form form {
+    width: 98%;
+    row-gap: 3vw;
+  }
+
+  .password-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .connection-form form .email {
+    width: 100%;
+    padding: 0;
+  }
+  .connection-form h1 {
+    width: 98%;
+    margin: 0 1%;
+    font-size: 42px;
+  }
+  .connection-form {
+    width: 98%;
+    margin: 0 auto;
+  }
+  .btn-login {
+    width: 100%;
+  }
+  .divider {
+    width: 98% !important;
+    margin: 0 auto !important;
+    justify-content: center !important;
+  }
+  .ant-divider-horizontal.ant-divider-with-text::after {
+    width: 46%;
+  }
+  .ant-divider-horizontal.ant-divider-with-text::before {
+    width: 46%;
+  }
+  .image {
+    width: 100%;
+    justify-content: center;
+  }
+  .image img {
+    width: 50%;
+  }
 }
