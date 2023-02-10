@@ -162,7 +162,6 @@ li.nav-item {
   cursor: pointer;
   row-gap: 1.5vh;
   font-size: 0.95vw;
-  font-family: "Poppins", sans-serif;
 }
 .nav-item:hover {
   color: #000000e6;
