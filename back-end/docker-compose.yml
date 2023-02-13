@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  postgres:
+    image: 'postgres:13.0'
+    hostname: postgres
+    container_name: nest.test
+    restart: always
+    ports:
+      - 5432:5432
+    env_file:
+      - .env
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    
+
+volumes:
+   postgres:
+      name: nest-init
+
+
