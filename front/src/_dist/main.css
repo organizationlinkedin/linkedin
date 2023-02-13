@@ -49,6 +49,15 @@
   outline: none;
   padding-left: 2%;
 }
+.password {
+  color: rgba(0, 0, 0, 0.9);
+  width: 72%;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 2px;
+  background-color: transparent;
+  height: 45px;
+  outline: none;
+}
 .btn-login {
   border-radius: 30px;
   padding: 10px;
@@ -90,18 +99,17 @@
   transition: all 0.2s ease-in-out;
 }
 .password-container {
-  background-color: #e8f0fe;
-  width: 74.5%;
+  width: 73.5%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  gap: 3vw;
+  padding-left: 1%;
   border: 1px solid rgba(0, 0, 0, 0.6);
   height: 45px;
 }
 .password {
   border: none !important;
-  width: 70% !important;
+  width: 100% !important;
 }
 .toggle-password {
   background: none;
@@ -158,7 +166,7 @@
   }
   .connection-form form .email {
     width: 100%;
-    padding: 0;
+    padding-left: 1%;
   }
   .connection-form h1 {
     width: 98%;
