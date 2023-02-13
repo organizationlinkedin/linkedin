@@ -109,6 +109,16 @@
   align-items: flex-start;
   justify-content: center;
 }
+.flex-jc-sb-ai-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-jc-end-ai-center {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 .flex-fs-js {
   display: flex;
   align-items: flex-start;

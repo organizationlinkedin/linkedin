@@ -109,6 +109,11 @@
   align-items: flex-start;
   justify-content: center;
 }
+.flex-jc-sb-ai-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .flex-jc-end-ai-center {
   display: flex;
   justify-content: flex-end;
@@ -177,4 +182,98 @@
 }
 .hide {
   display: none;
+}
+.carosel-container {
+  width: 100%;
+}
+.carousel-control-next-icon {
+  background-image: url("https://www.iconpacks.net/icons/2/free-arrow-left-icon-3099-thumb.png") !important;
+}
+.carousel-control-prev-icon {
+  background-image: url("https://www.iconpacks.net/icons/2/free-arrow-right-icon-3098-thumb.png") !important;
+}
+.carosel-controll {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.carosel-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 5%;
+  padding-right: 10%;
+  background-color: #f1ece5;
+  width: 100%;
+}
+.action-btn {
+  background: none;
+  outline: none;
+  border: none;
+  border-radius: 24px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration-line: none;
+}
+.btn-txt {
+  font-family: "Poppins", sans-serif;
+}
+.action-btn:hover {
+  background-color: #f3f2f0;
+}
+.slideInner___2mfX9 {
+  width: 90% !important;
+  height: fit-content !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  column-gap: 1rem;
+}
+.slide-image-container {
+  width: 40% !important;
+}
+.slide-img {
+  width: 100% !important;
+  height: 100% !important;
+}
+.slide-item {
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.slide-item h1 {
+  color: #8f5849;
+  width: 70%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+.slide-item p {
+  width: 70%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  margin-top: 10px;
+  padding: 0;
+}
+.slide___3-Nqo {
+  width: 37.3333% !important;
+  padding-bottom: 41.6667%;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #f1ece5;
+}
+.sliderTray___-vHFQ {
+  display: flex;
+  height: 70vh;
 }
