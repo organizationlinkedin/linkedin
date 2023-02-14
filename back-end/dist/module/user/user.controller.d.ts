@@ -9,7 +9,7 @@ export declare class UserController {
     private readonly _authService;
     constructor(_userService: UserService, _authService: AuthService);
     register(createUserDto: CreateUserDto): Promise<CreateUserDto & User>;
-    update(id: string, updateUserDto: UpdateUserDto): Promise<import("typeorm").UpdateResult>;
+    update(updateUserDto: UpdateUserDto, user: User, req: any): Promise<import("typeorm").UpdateResult>;
     getAll(): Promise<User[]>;
     login(user: CreateLoginDto): Promise<{
         message: string;

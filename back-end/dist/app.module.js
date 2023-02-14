@@ -14,6 +14,9 @@ const typeorm_1 = require("@nestjs/typeorm");
 const config_1 = require("@nestjs/config");
 const path_1 = require("path");
 const user_module_1 = require("./module/user/user.module");
+const post_module_1 = require("./module/post/post.module");
+const auth_module_1 = require("./module/auth/auth.module");
+const comment_module_1 = require("./module/comments/comment.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -34,7 +37,10 @@ AppModule = __decorate([
                     synchronize: true,
                 }),
             }),
-            user_module_1.UserModule
+            user_module_1.UserModule,
+            auth_module_1.AuthModule,
+            post_module_1.PostModule,
+            comment_module_1.CommentModule
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

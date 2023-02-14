@@ -22,6 +22,7 @@ const user_decorator_1 = require("./user.decorator");
 const user_service_1 = require("./user.service");
 const bcrypt = require("bcrypt");
 const auth_service_1 = require("../auth/auth.service");
+const jwt_authguard_1 = require("../auth/jwt-authguard");
 let UserController = class UserController {
     constructor(_userService, _authService) {
         this._userService = _userService;
@@ -32,8 +33,13 @@ let UserController = class UserController {
         const user = await this._userService.register(Object.assign(Object.assign({}, createUserDto), { password: hash }));
         return user;
     }
-    async update(id, updateUserDto) {
-        return await this._userService.updateUser(id, updateUserDto);
+    async update(updateUserDto, user, req) {
+        if (req.body.password) {
+            const hash = await bcrypt.hash(updateUserDto.password, 12);
+            req.body.password = hash;
+            return await this._userService.updateUser(user.id, updateUserDto);
+        }
+        return await this._userService.updateUser(user.id, updateUserDto);
     }
     async getAll() {
         return await this._userService.getAll();
@@ -56,14 +62,17 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "register", null);
 __decorate([
-    (0, common_1.Put)('update-user/:id'),
-    __param(0, (0, common_1.Param)("id")),
-    __param(1, (0, common_1.Body)()),
+    (0, common_1.UseGuards)(jwt_authguard_1.JwtAuthGuard),
+    (0, common_1.Put)('update-user'),
+    __param(0, (0, common_1.Body)()),
+    __param(1, (0, user_decorator_1.GetUser)()),
+    __param(2, (0, common_1.Req)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, user_update_dto_1.UpdateUserDto]),
+    __metadata("design:paramtypes", [user_update_dto_1.UpdateUserDto, user_model_1.User, Object]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "update", null);
 __decorate([
+    (0, common_1.UseGuards)(jwt_authguard_1.JwtAuthGuard),
     (0, common_1.Get)('get-all'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
@@ -77,6 +86,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "login", null);
 __decorate([
+    (0, common_1.UseGuards)(jwt_authguard_1.JwtAuthGuard),
     (0, common_1.Get)('get-current'),
     __param(0, (0, user_decorator_1.GetUser)()),
     __metadata("design:type", Function),
@@ -84,6 +94,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "getCurrent", null);
 __decorate([
+    (0, common_1.UseGuards)(jwt_authguard_1.JwtAuthGuard),
     (0, common_1.Delete)('delete/:id'),
     __param(0, (0, common_1.Param)("id")),
     __metadata("design:type", Function),

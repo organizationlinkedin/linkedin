@@ -9,39 +9,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.User = void 0;
+exports.Feed = void 0;
 const node_model_1 = require("../../../common/models/node.model");
 const comment_model_1 = require("../../comments/model/comment.model");
-const post_model_1 = require("../../post/model/post.model");
+const user_model_1 = require("../../user/model/user.model");
 const typeorm_1 = require("typeorm");
-let User = class User extends node_model_1.Node {
+let Feed = class Feed extends node_model_1.Node {
 };
 __decorate([
     (0, typeorm_1.Column)({ default: "" }),
     __metadata("design:type", String)
-], User.prototype, "username", void 0);
+], Feed.prototype, "title", void 0);
 __decorate([
     (0, typeorm_1.Column)({ default: "" }),
     __metadata("design:type", String)
-], User.prototype, "password", void 0);
+], Feed.prototype, "content", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ unique: true }),
+    (0, typeorm_1.ManyToOne)(() => user_model_1.User, (user) => user.posts),
+    __metadata("design:type", user_model_1.User)
+], Feed.prototype, "user", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ nullable: true }),
     __metadata("design:type", String)
-], User.prototype, "email", void 0);
+], Feed.prototype, "userId", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ nullable: true, default: "user" }),
-    __metadata("design:type", String)
-], User.prototype, "role", void 0);
-__decorate([
-    (0, typeorm_1.OneToMany)(() => post_model_1.Feed, (post) => post.user),
+    (0, typeorm_1.OneToMany)(() => comment_model_1.Comment, (comment) => comment.post),
     __metadata("design:type", Array)
-], User.prototype, "posts", void 0);
-__decorate([
-    (0, typeorm_1.OneToMany)(() => comment_model_1.Comment, (comment) => comment.user),
-    __metadata("design:type", Array)
-], User.prototype, "comments", void 0);
-User = __decorate([
+], Feed.prototype, "comments", void 0);
+Feed = __decorate([
     (0, typeorm_1.Entity)()
-], User);
-exports.User = User;
-//# sourceMappingURL=user.model.js.map
+], Feed);
+exports.Feed = Feed;
+//# sourceMappingURL=post.model.js.map
